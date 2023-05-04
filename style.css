@@ -1,0 +1,51 @@
+
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    background-color:  gray;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#PERSONAL-INFORMATION{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#EDUCATION-BACKGROUND{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+th,td{
+    border:1px solid black;
+    
+    padding: 15px 30px;
+}
+th{
+    background-color: grey;
+}
+body{
+    width: 100%;
+    font-size: 1em;
+}
+@media (max-width: 767px){
+    
+}
+#PROJECTS{
+    overflow-x: scroll;
+ }
+ #EDUCATIONBACKGROUND{
+    overflow-x: scroll;
+ }
+
+
+
+
+
+
+

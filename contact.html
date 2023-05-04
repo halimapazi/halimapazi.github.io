@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .form{
+
+            width: 250px;
+            height: 380px;
+            position: absolute;
+            border-radius: 10px;
+            padding: 25px;
+            background-color: whitesmoke;
+            text-align: center;
+
+        }
+        .form{
+            width: 100%;
+            font-family: sans-serif;
+            font-size: 22px;
+            color: blue;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            margin: auto;
+            padding: 8px;
+            
+            
+
+        }
+        .form input{
+            width: 50%;
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid gray;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+
+        }
+        
+        ::placeholder{
+             color: lightgray;
+             font-family: arial;
+        }
+        #submit{
+            color: blue;
+            width: 240px;
+            height: 40px;
+            background-color: rgb(140, 179, 194) ;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            font-size: 20px;
+        }
+        .form label{
+            color: black;
+        }
+        
+</style>
+
+    </head>
+    <body>
+        <div class="form">
+            <h2><b>CONTACT FORM</b></h2>
+            <form method="post">
+                <br>
+               <label>Name:</label>  <input type="Name"  placeholder="enter your name" id="Name" name="Name" required>
+               <br>
+               <label>Address:</label>  <input type="Address" placeholder="enter Address" id="Address" name="Address" required>
+                <br>
+                <label>Email:</label>  <input type="email"  placeholder="email here" id="email" name="email" required>
+                <br>
+                <label>Comment:</label> <input type="Comments"  placeholder="Comment here" id="Comments" name="Comments" required>
+                <br>
+                <br>
+                <br>
+    
+                <input type ="submit" id="submit">
+                <br>
+                <br>
+                <br>
+                <a class="nav-item" href="login.html">*Login Here*</a>
+                <br>
+                <br>
+    
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12305.313168640529!2d39.30405250824146!3d-6.19398358474921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185cd9ba5c4bd4e3%3A0x7c175742f40208d0!2zQmFideKAmXMgSG91c2U!5e0!3m2!1sen!2stz!4v1683193579176!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <script>
+            
+            document.addEventListener("DOMContentLoaded",()=>{
+               document.querySelector("#submit").onclick = ()=>{
+                   
+                    let name = document.querySelector("#Name");
+                    let Address = document.querySelector("#Address");
+                    let email = document.querySelector("#email");
+                    let Comments = document.querySelector("#Comments");
+                    
+
+                    localStorage.setItem("name",name.value);
+                    localStorage.setItem("Address",Address.value);
+                    localStorage.setItem("email",email.value);
+                    localStorage.setItem("Comments",Comments.value);
+                }
+                     });
+              
+          </script>
+          </body>
+</html>
+

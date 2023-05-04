@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my website</title>
+        <style>
+
+            .body {
+                width: 100%;
+
+                background-image: url("stones.JPG");
+                background-size: cover;
+                 height: 90vh;
+        }
+        
+        
+        .logo{
+            color: black;
+            font-size: 59px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 20px;
+            float: left;
+
+            
+        } 
+        .form{
+            width: 250px;
+            height: 380px;
+            position: absolute;
+            top: 40px;
+            left: 870px;
+            border-radius: 10px;
+            padding: 25px;
+            
+            background-color: whitesmoke;
+
+        }
+        .form h2{
+            width: 220px;
+            font-family: sans-serif;
+            font-size: 22px;
+            color: black;
+            text-align: center;
+            background-color: rgb(140, 179, 194);
+            border-radius: 10px;
+            margin: 2px;
+            padding: 8px;
+        }
+        .form input{
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            border-bottom: 1px solid gray;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+        }
+        ::placeholder{
+            color: lightgray;
+            font-family: arial;
+        }
+        .btn{
+            
+            width: 240px;
+            height: 40px;
+            background-color: rgb(140, 179, 194);
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            font-size: 20px;
+            color: black;
+        
+            
+        }
+        .btn:hover{
+            background-color:skyblue;
+            color: white;
+        
+        }
+        
+
+        
+
+        
+        
+        
+        </style>
+    </head>
+    <body>
+
+
+        <div class="body">
+            
+            <h2 class="logo">ReSume</h2>
+            
+            
+
+            
+
+        </div>
+        <div class="form">
+            <h2>LOGIN FORM</h2>
+            <br>
+            <input type="Name" id="Name" placeholder="enter your name" name="Name" required>
+            <br>          
+            <input type="email" id="email" placeholder="email  here" name="email" required>
+            <br>
+            <br>
+            <button type="submit" id="submit"><b>LOGIN</b></button>
+            <br>
+            <br>
+            
+
+        </div>
+        <script>
+           document.addEventListener("DOMContentLoaded",function(){
+
+const Login = document.querySelector("#submit");
+Login.onclick = (e)=> {
+    e.preventDefault();
+    
+const name = document.querySelector("#Name").value;
+const email = document.querySelector("#email").value;
+ 
+// document.querySelector("#name").innerHTML = localStorage.getItem("Name");
+//  document.querySelector("#email").innerHTML = localStorage.getItem("email");
+const Name = localStorage.getItem("name");
+const Email = localStorage.getItem("email");
+
+if(name == "" && email == ""){
+    alert("Please enter");
+}
+else{
+    if(name == Name && email == Email){
+    alert("login successful");
+    window.location.href= "index.html";
+}
+else{
+    alert("login failed");
+}
+
+}
+
+
+
+}
+
+});
+        </script>
+        
+
+
+    </body>
+</html>
